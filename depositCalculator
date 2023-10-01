@@ -1,0 +1,22 @@
+package _01_10_2023_N1;
+import java.util.Scanner;
+public class _3_depositCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Моля въведете желана сума: ");
+        double depositSum = Double.parseDouble(scanner.nextLine());
+        System.out.println("Моля въведете желания период: ");
+        int depositPeriod = Integer.parseInt(scanner.nextLine());
+        System.out.println("Моля въведете годишния лихвен %: ");
+        double interestRate = Double.parseDouble(scanner.nextLine());
+
+        double Rate = (depositSum * (interestRate/100)) / 12;
+        //double monthlyRate = Rate /12;
+        double finalSum = depositSum + (depositPeriod * Rate);
+
+        System.out.println("Вие ще трябва да върнете: " + finalSum);
+
+
+
+    }
+}
